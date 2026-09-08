@@ -2,9 +2,6 @@ export const skillsData = [
   {
     id: 1,
     category: "Frontend",
-    shortLabel: "FE",
-    description:
-      "Building responsive and reusable user interfaces for modern web applications.",
     skills: [
       "React.js",
       "HTML5",
@@ -15,9 +12,6 @@ export const skillsData = [
   {
     id: 2,
     category: "Backend",
-    shortLabel: "BE",
-    description:
-      "Developing server-side logic, APIs, and backend services for web applications.",
     skills: [
       "Node.js",
       "Express.js",
@@ -28,9 +22,6 @@ export const skillsData = [
   {
     id: 3,
     category: "Programming",
-    shortLabel: "DEV",
-    description:
-      "Programming languages I use for development, problem solving, and fundamentals.",
     skills: [
       "Java",
       "JavaScript",
@@ -41,9 +32,6 @@ export const skillsData = [
   {
     id: 4,
     category: "Database",
-    shortLabel: "DB",
-    description:
-      "Working with relational and NoSQL databases for storing and managing application data.",
     skills: [
       "PostgreSQL",
       "MySQL",
@@ -54,13 +42,67 @@ export const skillsData = [
   {
     id: 5,
     category: "Tools / Technologies",
-    shortLabel: "TOOLS",
-    description:
-      "Tools I use for version control, collaboration, development workflows, and deployment.",
     skills: [
       "Git",
       "GitHub",
       "Vercel",
     ],
+  },
+];
+
+
+export const projectsData = [
+  {
+    id: 1,
+
+    name: "KaamON",
+
+    label: "Local Work Marketplace",
+
+    description:
+      "A two-sided local work marketplace where the same account can hire people for short-term tasks or discover nearby earning opportunities.",
+
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "REST APIs",
+    ],
+
+    image: "kaamon",
+
+    github:
+      "https://github.com/ashwinkumar928/kaamon-mvp.git",
+
+    live:
+      "https://kaamon-mvp.vercel.app/",
+  },
+
+  {
+    id: 2,
+
+    name: "Devrooms",
+
+    label: "Developer Collaboration Platform",
+
+    description:
+      "An AI-powered developer collaboration platform designed for real-time communication, programming assistance, debugging, and code review.",
+
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Clerk",
+    ],
+
+    image: "devrooms",
+
+    github:
+      "https://github.com/ashwinkumar928/Devrooms.git",
+
+    live:
+      "https://devrooms-chatbot.vercel.app/",
   },
 ];
