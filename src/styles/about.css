@@ -1,0 +1,268 @@
+/* =========================================
+   COMPACT ABOUT SECTION
+========================================= */
+
+.about {
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  align-items: center;
+
+  padding: 65px 0;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.06);
+
+  scroll-margin-top: 70px;
+}
+
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.about-container {
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 0.85fr)
+    minmax(420px, 1.15fr);
+
+  gap: 110px;
+
+  align-items: start;
+}
+
+
+/* =========================================
+   LEFT SIDE
+========================================= */
+
+.about-heading {
+  max-width: 470px;
+}
+
+
+.about-label {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 26px;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+
+.about-label::before {
+  content: "";
+
+  width: 28px;
+  height: 1px;
+
+  background: var(--color-border-light);
+}
+
+
+.about-title {
+  font-size: clamp(
+    2.2rem,
+    3.6vw,
+    3.4rem
+  );
+
+  font-weight: 500;
+
+  letter-spacing: -0.045em;
+
+  line-height: 1.08;
+}
+
+
+.about-title span {
+  color: var(--color-text-secondary);
+}
+
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.about-body {
+  max-width: 620px;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.about-intro {
+  max-width: 590px;
+
+  margin-bottom: 38px;
+}
+
+
+.about-intro p {
+  color: var(--color-text-secondary);
+
+  font-size: 0.94rem;
+
+  line-height: 1.75;
+}
+
+
+.about-intro p + p {
+  margin-top: 14px;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.about-details {
+  border-top: 1px solid
+    var(--color-border);
+}
+
+
+.about-detail {
+  display: grid;
+
+  grid-template-columns: 140px 1fr;
+
+  gap: 25px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid
+    var(--color-border);
+}
+
+
+.about-detail-label {
+  padding-top: 2px;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.65rem;
+  font-weight: 600;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+.about-detail h3 {
+  color: var(--color-text);
+
+  font-size: 0.93rem;
+  font-weight: 500;
+}
+
+
+.about-detail p {
+  margin-top: 4px;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.8rem;
+
+  line-height: 1.55;
+}
+
+
+.about-detail .about-goal {
+  max-width: 410px;
+
+  margin-top: 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.84rem;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .about {
+    min-height: auto;
+
+    padding: 80px 0;
+  }
+
+
+  .about-container {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+
+  .about-heading {
+    max-width: 600px;
+  }
+
+
+  .about-body {
+    max-width: 650px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+
+  .about {
+    padding: 65px 0;
+  }
+
+
+  .about-container {
+    gap: 40px;
+  }
+
+
+  .about-title {
+    font-size: 2.25rem;
+  }
+
+
+  .about-intro {
+    margin-bottom: 30px;
+  }
+
+
+  .about-intro p {
+    font-size: 0.9rem;
+  }
+
+
+  .about-detail {
+    grid-template-columns: 1fr;
+
+    gap: 7px;
+
+    padding: 17px 0;
+  }
+
+}

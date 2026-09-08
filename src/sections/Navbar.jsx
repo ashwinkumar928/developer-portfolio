@@ -4,10 +4,6 @@ import "../styles/navbar.css";
 
 const navLinks = [
   {
-    name: "Home",
-    href: "#home",
-  },
-  {
     name: "About",
     href: "#about",
   },
@@ -19,6 +15,10 @@ const navLinks = [
     name: "Projects",
     href: "#projects",
   },
+  {
+    name: "Contact",
+    href: "#contact",
+  },
 ];
 
 function Navbar() {
@@ -28,25 +28,19 @@ function Navbar() {
     setIsMenuOpen(false);
   };
 
-  const toggleMenu = () => {
-    setIsMenuOpen((previousState) => !previousState);
-  };
-
   return (
     <header className="navbar">
-      <div className="container navbar-container">
+      <div className="container navbar-inner">
         <a
           href="#home"
-          className="navbar-brand"
+          className="navbar-logo"
           onClick={closeMenu}
-          aria-label="Go to homepage"
         >
-          Ashwin
-          <span className="navbar-brand-dot">.</span>
+          Ashwin<span>.</span>
         </a>
 
         <nav
-          className="navbar-links"
+          className="navbar-desktop"
           aria-label="Main navigation"
         >
           {navLinks.map((link) => (
@@ -60,61 +54,75 @@ function Navbar() {
           ))}
         </nav>
 
-        <div className="navbar-desktop-cta">
+        <div className="navbar-social">
           <a
-            href="#contact"
-            className="button button-secondary navbar-cta"
+            href="https://github.com/ashwinkumar928"
+            target="_blank"
+            rel="noreferrer"
           >
-            Contact Me
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/ashwin-kumar-7b4632344"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
           </a>
         </div>
 
         <button
-          className={`navbar-menu-button ${
-            isMenuOpen ? "open" : ""
-          }`}
           type="button"
+          className={`menu-button ${
+            isMenuOpen ? "active" : ""
+          }`}
           aria-label="Toggle navigation menu"
           aria-expanded={isMenuOpen}
-          aria-controls="mobile-navigation"
-          onClick={toggleMenu}
+          onClick={() =>
+            setIsMenuOpen((previous) => !previous)
+          }
         >
-          <span className="navbar-menu-icon">
-            <span />
-            <span />
-            <span />
-          </span>
+          <span />
+          <span />
         </button>
       </div>
 
       <div
-        id="mobile-navigation"
-        className={`mobile-menu ${
-          isMenuOpen ? "open" : ""
+        className={`mobile-navigation ${
+          isMenuOpen ? "active" : ""
         }`}
       >
-        <nav
-          className="container mobile-menu-inner"
-          aria-label="Mobile navigation"
-        >
+        <nav className="container">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="mobile-menu-link"
               onClick={closeMenu}
             >
               {link.name}
+
+              <span>↗</span>
             </a>
           ))}
 
-          <a
-            href="#contact"
-            className="button button-secondary navbar-cta"
-            onClick={closeMenu}
-          >
-            Contact Me
-          </a>
+          <div className="mobile-socials">
+            <a
+              href="https://github.com/ashwinkumar928"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/ashwin-kumar-7b4632344"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
         </nav>
       </div>
     </header>
