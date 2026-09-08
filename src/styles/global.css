@@ -1,0 +1,485 @@
+/* =========================================
+   PORTFOLIO GLOBAL DESIGN SYSTEM
+========================================= */
+
+:root {
+  /* Colors */
+  --color-bg: #090b10;
+  --color-bg-soft: #0d1017;
+
+  --color-surface: #11151d;
+  --color-surface-hover: #151a24;
+
+  --color-border: #222834;
+  --color-border-light: #2b3342;
+
+  --color-text: #f5f7fb;
+  --color-text-secondary: #b4bcc9;
+  --color-text-muted: #7f8898;
+
+  --color-accent: #7c9cff;
+  --color-accent-hover: #93adff;
+
+  /* Typography */
+  --font-primary:
+    Inter,
+    ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  /* Layout */
+  --container-width: 1180px;
+
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  /* Shadows */
+  --shadow-sm:
+    0 8px 24px rgba(0, 0, 0, 0.16);
+
+  --shadow-md:
+    0 18px 50px rgba(0, 0, 0, 0.24);
+
+  /* Transitions */
+  --transition-fast: 180ms ease;
+  --transition-normal: 260ms ease;
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family: var(--font-primary);
+
+  background:
+    radial-gradient(
+      circle at 50% -20%,
+      rgba(124, 156, 255, 0.08),
+      transparent 38%
+    ),
+    var(--color-bg);
+
+  color: var(--color-text);
+
+  line-height: 1.6;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: rgba(124, 156, 255, 0.28);
+  color: var(--color-text);
+}
+
+.sr-only {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  padding: 0;
+  margin: -1px;
+
+  overflow: hidden;
+
+  clip: rect(0, 0, 0, 0);
+
+  white-space: nowrap;
+
+  border: 0;
+}
+
+
+/* =========================================
+   GLOBAL LAYOUT
+========================================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.site-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  width: min(
+    calc(100% - 40px),
+    var(--container-width)
+  );
+
+  margin-inline: auto;
+}
+
+.section {
+  padding: 110px 0;
+}
+
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+.eyebrow {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: var(--color-accent);
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  max-width: 760px;
+
+  color: var(--color-text);
+
+  font-size: clamp(
+    2rem,
+    5vw,
+    3.5rem
+  );
+
+  font-weight: 700;
+
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.section-description {
+  max-width: 650px;
+
+  margin-top: 20px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+
+  padding: 0 22px;
+
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+
+  cursor: pointer;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.button-primary:hover {
+  background: #ffffff;
+}
+
+.button-secondary {
+  background: transparent;
+
+  border-color: var(--color-border-light);
+
+  color: var(--color-text);
+}
+
+.button-secondary:hover {
+  background: var(--color-surface);
+
+  border-color: #3a4354;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.card {
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform var(--transition-normal),
+    border-color var(--transition-normal),
+    background-color var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+
+  background: var(--color-surface-hover);
+
+  border-color: var(--color-border-light);
+}
+
+
+/* =========================================
+   TECH TAGS
+========================================= */
+
+.tag {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 30px;
+
+  padding: 5px 11px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 999px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+
+/* =========================================
+   TEMPORARY DESIGN SYSTEM PREVIEW
+========================================= */
+
+.design-preview {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 80px 0;
+}
+
+.design-preview-content {
+  max-width: 760px;
+}
+
+.design-preview h1 {
+  margin-top: 12px;
+
+  font-size: clamp(
+    2.8rem,
+    8vw,
+    5.5rem
+  );
+
+  line-height: 0.98;
+
+  letter-spacing: -0.06em;
+}
+
+.design-preview p {
+  max-width: 610px;
+
+  margin-top: 26px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+.design-preview-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+.preview-card {
+  max-width: 480px;
+
+  margin-top: 50px;
+
+  padding: 26px;
+}
+
+.preview-card span {
+  color: var(--color-accent);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.preview-card h2 {
+  margin-top: 10px;
+
+  font-size: 1.3rem;
+}
+
+.preview-card p {
+  margin-top: 8px;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.92rem;
+}
+
+
+/* =========================================
+   RESPONSIVE BASE
+========================================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: min(
+      calc(100% - 30px),
+      var(--container-width)
+    );
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(
+      calc(100% - 24px),
+      var(--container-width)
+    );
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .button {
+    min-height: 46px;
+
+    padding: 0 18px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}
+
+section[id] {
+  scroll-margin-top: 80px;
+}
