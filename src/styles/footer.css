@@ -1,0 +1,137 @@
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+  padding: 34px 0;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.06);
+}
+
+
+.footer-container {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* =========================================
+   IDENTITY
+========================================= */
+
+.footer-identity h2 {
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  letter-spacing: -0.02em;
+}
+
+
+.footer-identity p {
+  margin-top: 4px;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.72rem;
+}
+
+
+/* =========================================
+   LINKS
+========================================= */
+
+.footer-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+.footer-links a {
+  color: var(--color-text-muted);
+
+  font-size: 0.76rem;
+
+  transition:
+    color var(--transition-fast);
+}
+
+
+.footer-links a:hover {
+  color: var(--color-text);
+}
+
+
+/* =========================================
+   COPYRIGHT
+========================================= */
+
+.footer-meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+.footer-year {
+  color: var(--color-text-muted);
+
+  font-size: 0.7rem;
+}
+
+
+.footer-top {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.74rem;
+
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+
+.footer-top:hover {
+  color: var(--color-text);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .footer-container {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 22px;
+  }
+
+
+  .footer-meta {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+}
