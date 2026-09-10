@@ -1,6 +1,7 @@
 import "../styles/footer.css";
 
 
+
 function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -23,6 +24,14 @@ function Footer() {
 
 
         <div className="footer-links">
+
+          <a
+            href="/Ashwin_Kumar_CV.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            CV
+          </a>
 
           <a
             href="https://github.com/ashwinkumar928"
