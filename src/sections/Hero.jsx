@@ -2,6 +2,25 @@ import profileImage from "../assets/images/ashwin-profile.jpg";
 
 import "../styles/hero.css";
 
+function CvIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M6 2h8l4 4v16H6z" />
+      <path d="M14 2v5h5" />
+      <path d="M9 13h6" />
+      <path d="M9 17h4" />
+    </svg>
+  );
+}
+
 
 function GithubIcon() {
   return (
@@ -129,6 +148,16 @@ function Hero() {
 
 
             <div className="hero-profile-socials">
+
+              <a
+                href="/Ashwin_Kumar_CV.pdf"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="View Ashwin Kumar CV"
+                title="View CV"
+              >
+    <CvIcon />
+  </a>
 
               <a
                 href="https://github.com/ashwinkumar928"

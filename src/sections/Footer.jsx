@@ -26,14 +26,6 @@ function Footer() {
         <div className="footer-links">
 
           <a
-            href="/Ashwin_Kumar_CV.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
-            CV
-          </a>
-
-          <a
             href="https://github.com/ashwinkumar928"
             target="_blank"
             rel="noreferrer"
