@@ -2,14 +2,14 @@ import {
   projectsData,
 } from "../data/portfolioData.js";
 
-import kaamonImage from "../assets/images/kaamon-preview.png";
+import karviamImage from "../assets/images/karviam-preview.png";
 import devroomsImage from "../assets/images/devrooms-preview.png";
 
 import "../styles/projects.css";
 
 
 const projectImages = {
-  kaamon: kaamonImage,
+   karviam: karviamImage,
   devrooms: devroomsImage,
 };
 

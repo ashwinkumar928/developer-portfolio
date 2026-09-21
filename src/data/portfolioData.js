@@ -53,31 +53,31 @@ export const skillsData = [
 
 export const projectsData = [
   {
-    id: 1,
+  id: 1,
 
-    name: "KaamON",
+  name: "Karviam",
 
-    label: "Local Work Marketplace",
+  label: "Local Work Marketplace",
 
-    description:
-      "A two-sided local work marketplace where the same account can hire people for short-term tasks or discover nearby earning opportunities.",
+  description:
+    "A two-sided local work marketplace connecting people who need local work done with nearby people looking for short-term earning opportunities.",
 
-    technologies: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "PostgreSQL",
-      "REST APIs",
-    ],
+  technologies: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "PostgreSQL",
+    "REST APIs",
+  ],
 
-    image: "kaamon",
+  image: "karviam",
 
-    github:
-      "https://github.com/ashwinkumar928/kaamon-mvp.git",
+  github:
+    "https://github.com/ashwinkumar928/kaamon-mvp.git",
 
-    live:
-      "https://kaamon-mvp.vercel.app/",
-  },
+  live:
+    "https://karviam.in/",
+},
 
   {
     id: 2,
