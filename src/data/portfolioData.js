@@ -6,6 +6,7 @@ export const skillsData = [
       "React.js",
       "HTML5",
       "CSS3",
+      "Tailwind CSS",
     ],
   },
 
@@ -46,6 +47,8 @@ export const skillsData = [
       "Git",
       "GitHub",
       "Vercel",
+      "Supabase",
+      "Clerk",
     ],
   },
 ];
