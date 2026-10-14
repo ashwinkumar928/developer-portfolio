@@ -108,4 +108,31 @@ export const projectsData = [
     live:
       "https://devrooms-chatbot.vercel.app/",
   },
+
+  {
+  id: 3,
+
+  name: "SmartRec",
+
+  label: "Recommendation System",
+
+  description:
+    "A recommendation system that tracks user interactions such as searches, views, and cart activity to build interest profiles and generate personalized product recommendations.",
+
+  technologies: [
+    "Node.js",
+    "Express.js",
+    "REST APIs",
+    "PostgreSQL",
+    "Supabase",
+  ],
+
+  image: "smartrec",
+
+  github:
+    "[https://github.com/ashwinkumar928/SmartRec.git]",
+
+  live:
+    "[SMARTREC_LIVE_LINK]",
+  },
 ];
