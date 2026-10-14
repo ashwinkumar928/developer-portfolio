@@ -127,12 +127,11 @@ export const projectsData = [
     "Supabase",
   ],
 
-  image: "smartrec",
+  image: null,
 
   github:
-    "[https://github.com/ashwinkumar928/SmartRec.git]",
+    "https://github.com/ashwinkumar928/SmartRec.git",
 
-  live:
-    "[SMARTREC_LIVE_LINK]",
+  live: null,
   },
 ];
